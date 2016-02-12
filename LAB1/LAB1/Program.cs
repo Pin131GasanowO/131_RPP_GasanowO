@@ -10,18 +10,18 @@ namespace TIME_IS_DEAD
     {
         static void Main(string[] args)
         {
-            int x;                                        //1.
+            int x;                                        //1. 1.	Объявить две целочисленных переменных x и y.
             Console.Write("Введите значение x: ");
-            x = Convert.ToInt32(Console.ReadLine());      //2.
-            int y; //1.
+            x = Convert.ToInt32(Console.ReadLine());      //2. 2.	Ввести с клавиатуры их значения.
+            int y; //1. 1.	Объявить две целочисленных переменных x и y.
             Console.Write("Введите значение y: ");
-            y = Convert.ToInt32(Console.ReadLine());      //2.
-            int z = (y + x) - 1;                          //3,6.
+            y = Convert.ToInt32(Console.ReadLine());      //2. 2.	Ввести с клавиатуры их значения.
+            int z = (y + x) - 1;                          //3,6. 3.	Объявить переменную z, инициализировав ее суммой x и y. 6.	Отнимите от z 1. Результат присвойте переменной z и выведите на экран
 
             Condition:
             if (z >= 0)
             {
-                Console.WriteLine(z--);           //7.
+                Console.WriteLine(z--);           //7. С помощью оператора goto повторите операцию в пункте 6, пока z не станет равной нулю.
                 goto Condition;
             }
 
@@ -30,39 +30,39 @@ namespace TIME_IS_DEAD
             Console.WriteLine(z--);
             if (z >= 0)
             {
-                goto Start;                           //8.
+                goto Start;                           //8.	Какой цикл вы использовали в седьмом пункте? До или Пока? Используйте  другой тип цикла.
             }
 
             do
             {
-                Console.WriteLine(z--);               //9.
+                Console.WriteLine(z--);               //9.	Используйте для решения задачи пунктов 7-8 инструкцию while.
             }
             while (z >= 0);
 
-            for (int i = z; z >= 0; i--)                  //10.
+            for (int i = z; z >= 0; i--)                  //10.	Используйте для решения задачи пунктов 7-8 инструкцию for.
             {
                 Console.WriteLine(i);
             }
 
             if (z > 0)
-                Console.WriteLine("z положительное");     //5.
+                Console.WriteLine("z положительное");     //5. Вывести на экран сообщение о том, какое z число: положительное или отрицательнлое, четное или нечетное, делиться ли оно на 5, 10, 20 без остатка.
             else Console.WriteLine("z отрицательное");
 
             if (z % 2 == 0)
                 Console.WriteLine("z четное");
-            else Console.WriteLine("z не четное");        //5.
+            else Console.WriteLine("z не четное");        //5. Вывести на экран сообщение о том, какое z число: положительное или отрицательнлое, четное или нечетное, делиться ли оно на 5, 10, 20 без остатка.
 
             if (z % 5 == 0)
                 Console.WriteLine("z делится на 5");
-            else Console.WriteLine("z не делится на 5");  //5.
+            else Console.WriteLine("z не делится на 5");  //5. Вывести на экран сообщение о том, какое z число: положительное или отрицательнлое, четное или нечетное, делиться ли оно на 5, 10, 20 без остатка.
 
             if (z % 10 == 0)
                 Console.WriteLine("z делится на 10");
-            else Console.WriteLine("z не делится на 10"); //5.
+            else Console.WriteLine("z не делится на 10"); //5. Вывести на экран сообщение о том, какое z число: положительное или отрицательнлое, четное или нечетное, делиться ли оно на 5, 10, 20 без остатка.
 
             if (z % 20 == 0)
                 Console.WriteLine("z делится на 20");
-            else Console.WriteLine("z не делится на 20"); //5.
+            else Console.WriteLine("z не делится на 20"); //5. Вывести на экран сообщение о том, какое z число: положительное или отрицательнлое, четное или нечетное, делиться ли оно на 5, 10, 20 без остатка.
 
             Console.ReadKey();
         }
