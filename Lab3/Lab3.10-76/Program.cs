@@ -10,6 +10,7 @@ namespace Lab3._10_76
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите длинну массива:");
             int n = Convert.ToInt32(Console.ReadLine());
             int[] x = new int[n];
             Random z = new Random();
