@@ -8,18 +8,33 @@ namespace Lab3._10_52
 {
     class Program
     {
+        static bool isRepit(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                int element = array[i];
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (element == array[j]) return true;
+                }
+            }
+            return false;
+        }
+
         static void Main(string[] args)
         {
+            int[] a = new int[5];
             Random rnd = new Random();
-            int[] a = Enumerable.Repeat(0, 30).Select(x => rnd.Next(0, 30)).ToArray();
-            Console.WriteLine("Весь массив: ");
-            Console.WriteLine(string.Join(" ", a));
-            Console.WriteLine("Уникальные элементы: ");
-            Console.WriteLine(string.Join(" ", a.Distinct()));
-            Console.WriteLine("Повторяющиеся: ");
-            Console.WriteLine(string.Join(" ", a.Where(x => a.Count(y => x == y) > 1).Distinct()));
-            Console.ReadKey(true);
+            for (int i = 0; i < a.Length;i++ )
+            {
+                int abc = rnd.Next(10);
+                a[i] = abc;
+            }
+            if (isRepit(a)) Console.WriteLine("Есть повторяющиекся элементы");
+
+            Console.ReadKey();
         }
+
     }
 }
 
