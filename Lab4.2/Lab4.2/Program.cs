@@ -32,7 +32,7 @@ namespace Lab4._2
                 int sum = 0;
                 for (int j = 0; j < m; j++)
                 {
-                    sum += a[j, i];
+                    sum += a[i, j];
                 }
                 Console.WriteLine("Сумма чисел в {0} столбце: {1}", i, sum);
             }

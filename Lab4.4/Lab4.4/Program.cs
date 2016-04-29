@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lab4._4
 {
     class Program
-    {
+        {
         static void Main(string[] args)
         {
             Console.WriteLine("Введите n: ");
@@ -18,28 +18,30 @@ namespace Lab4._4
             int[,] a = new int[n, m];
 
             Random random = new Random();
+
             for (int i = 0; i < n; i++)
             {
+
                 for (int j = 0; j < m; j++)
                 {
                     a[i, j] = random.Next(0, 100);
                     Console.Write("{0,4}", a[i, j] + " ");
                 }
-                Console.WriteLine();
+            Console.WriteLine();
             }
             Console.WriteLine();
-            int max;
+
             for (int i = 0; i < n; i++)
             {
-                max = 0;
+                int min = a[i, 0];
                 for (int j = 0; j < m; j++)
                 {
-                    if (a[i, j] > max)
+                    if (a[i, j] < min)
                     {
-                        max = a[i, j];
+                    min = a[i, j];
                     }
                 }
-                Console.WriteLine(max);
+                Console.WriteLine(min);
             }
             Console.ReadKey();
         }
