@@ -16,5 +16,12 @@ namespace Lab7
             Console.WriteLine(b1.WRTLN());
             Console.ReadKey();
         }
+        //static void Main(string[] args)
+        //{
+            //GraphObject a = new Point();
+            //a.DrawSth();
+            //Point b = new Point();
+            //b.DrawSth();
+        //}
     }
 }
