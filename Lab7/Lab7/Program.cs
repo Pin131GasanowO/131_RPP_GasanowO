@@ -10,18 +10,6 @@ namespace Lab7
     {
         static void Main(string[] args)
         {
-            Apple a1 = new Apple("Это яблоко", "дерево");
-            Console.WriteLine(a1.WRTLN());
-            Berry b1 = new Berry("bb1", "bb2");
-            Console.WriteLine(b1.WRTLN());
-            Console.ReadKey();
         }
-        //static void Main(string[] args)
-        //{
-            //GraphObject a = new Point();
-            //a.DrawSth();
-            //Point b = new Point();
-            //b.DrawSth();
-        //}
     }
 }
