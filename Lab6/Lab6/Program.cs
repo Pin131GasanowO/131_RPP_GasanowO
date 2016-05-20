@@ -20,6 +20,14 @@ namespace Lab6
             {
                 return 2 * 3.14 * Math.Sqrt(0.5 * (VerticalRad * VerticalRad + HorisontalRad * HorisontalRad));
             }
+            public void print()
+            {
+                Console.WriteLine("Горизонтальный радиус: ");
+                Console.WriteLine(HorisontalRad);
+                Console.WriteLine("");
+                Console.WriteLine("Вертикальный радиус: ");
+                Console.WriteLine(VerticalRad);
+            }
         }
         static void Main(string[] args)
         {
@@ -32,18 +40,22 @@ namespace Lab6
                 ellipse[i] = new Ellipse();
                 ellipse[i].VerticalRad = rand.Next(1, 100);
                 ellipse[i].HorisontalRad = rand.Next(1, 100);
+                Console.WriteLine("Эллипс по номером: {0}", i);
+                Console.WriteLine("");
+                ellipse[i].print();
+                Console.WriteLine("");
             }
 
             int minP = 0;
             int minS = 0;
             for (int i = 1; i < ellipse.Length; i++)
             {
-                if (ellipse[minS].GetSquare() < ellipse[i].GetSquare()) minS = i;
-                if (ellipse[minP].GetPerimetr() < ellipse[i].GetPerimetr()) minP = i;
+                if (ellipse[minS].GetSquare() > ellipse[i].GetSquare()) minS = i;
+                if (ellipse[minP].GetPerimetr() > ellipse[i].GetPerimetr()) minP = i;
             }
 
-            Console.WriteLine("Минимальный периметр у эллипса №{0} с параметрами: а = {1}, b = {2}", minP + 1, ellipse[minP].HorisontalRad, ellipse[minP].VerticalRad);
-            Console.WriteLine("Минимальная площадь у эллипса №{0} с параметрами: а = {1}, b = {2}", minS + 1, ellipse[minS].HorisontalRad, ellipse[minS].VerticalRad);
+            Console.WriteLine("Минимальный периметр у эллипса №{0} с параметрами: а = {1}, b = {2}", minP, ellipse[minP].HorisontalRad, ellipse[minP].VerticalRad);
+            Console.WriteLine("Минимальная площадь у эллипса №{0} с параметрами: а = {1}, b = {2}", minS, ellipse[minS].HorisontalRad, ellipse[minS].VerticalRad);
             Console.ReadKey();
         }
     }
